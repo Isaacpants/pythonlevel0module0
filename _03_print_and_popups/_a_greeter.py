@@ -4,7 +4,13 @@ from tkinter import messagebox, simpledialog, Tk
 if __name__ == '__main__':
     
     # Make a new window variable, window = Tk()
-    
+    window = Tk()
+    window.withdraw()
+    name = simpledialog.askstring(title= 'Greeter', prompt = "What is your name?")
+    messagebox.showinfo(name)
+    print(name)
+    messagebox.showerror()
+    window.mainloop()
     # Hide the window using the window's .withdraw() method
     
     # Ask the user for their name and save it to a variable

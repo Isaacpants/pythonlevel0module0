@@ -3,12 +3,22 @@ from tkinter import messagebox, simpledialog, Tk
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
 if __name__ == '__main__':
     # Make a new window variable, window = Tk()
-
+    window = Tk()
+    window.withdraw()
+    messagebox.showinfo('Greeter', message= "If you find yourself having to cross a river, heres how to do it...")
+    simpledialog.askstring('Greeter', prompt="Enter an adjective")
     # Hide the window using the window's .withdraw() method
-
+    str1 = simpledialog.askstring('Greeter',prompt="Enter a liquid")
+    str2 = simpledialog.askstring('Greeter',prompt="enter a body part")
+    str3 = simpledialog.askstring('Greeter',prompt="enter a verb")
+    str4 = simpledialog.askstring('Greeter',prompt="enter a place")
     # Put this sentence in a pop-up message box:
     # "If you find yourself having to cross a piranha-infested river, here's how to do it..."
-
+    messagebox.showinfo('Greeter', "Piranhas are more " + str1 + " during the day, so cross the river at\n"
+        "night. Piranhas are attracted to fresh [**type of liquid**] and will most\n"
+        "likely take a bite out of your [**body part**] if you [**verb**]. Whatever\n"
+        "you do, if you have an open wound, try to find another way to get "
+        "back to the [**place**]. Good luck!")
     # Get the player to enter an adjective
 
     # Get the player to enter a type of liquid

@@ -19,20 +19,26 @@ if __name__ == '__main__':
 
     baseSize = 200          # the size of the black part of the star
     flameSize = 130         # the length of the flaming arms
-    
+
     # Make a new turtle
-    
+    rob = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    rob.shape('turtle')
+    rob.width(2)
+    rob.speed(0)
     # Set the turtle width to 2
-    
+    rob.hideturtle()
     # Set the turtle speed to 0 (fastest)
     
     # Use a for loop to repeat all of the code below ONE time (we will change
     # this later)
-        
+    for i in range(25):
         # Set the turtle .fillcolor() to orange
-        
+        rob.fillcolor('red')
+        rob.begin_fill()
+        rob.right(360/8)
+        rob.forward(64)
+        rob.right(-40)
         # Call the turtle .begin_fill() function
         
         # TURN RIGHT     Turn the turtle 1/8 of a circle (hint: 360 degrees
@@ -44,7 +50,12 @@ if __name__ == '__main__':
         #                numbers will turn the turtle counter-clockwise.)
         
         # DRAW FLAME     Move the turtle the distance in the variable flameSize
-        
+        rob.forward(flameSize)
+        rob.right(170)
+        rob.forward(flameSize)
+        rob.right(62)
+        rob.forward(baseSize)
+        rob.end_fill()
         #                Turn the turtle to the right 170 degrees
          
         #                Move the turtle the distance in the variable flameSize (again)

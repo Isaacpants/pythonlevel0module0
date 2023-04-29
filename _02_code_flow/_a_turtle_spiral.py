@@ -14,7 +14,10 @@ if __name__ == '__main__':
     window.bgcolor('white')
     
     # Make a new turtle
-    
+    rob = turtle.Turtle()
+    rob.shape('turtle')
+    rob.speed(100)
+    rob.color('green')
     # This code sets our shape to a turtle
     
     # Set your turtle's speed (0=fastest, 1=slowest, 10=faster)
@@ -22,9 +25,12 @@ if __name__ == '__main__':
     # Set your turtle's color using .color('green')
     
     # Use a loop to repeat a the code below 50 times
-        
+    for i in range(50):
         # Set the turtle color to a random color
-
+        rob.color(get_random_color())
+        rob.forward(5*i)
+        rob.right(360/7)
+        rob.width(i)
         # Move the turtle (5*i) pixels. 'i' is the loop variable
         
         # Turn the turtle (360/7) degrees to the right

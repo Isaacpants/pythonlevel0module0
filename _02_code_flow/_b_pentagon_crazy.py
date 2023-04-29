@@ -21,19 +21,29 @@ if __name__ == '__main__':
     colors = ('red', 'blue', 'green', 'yellow', 'orange')
     
     # Make a new turtle
-    
+    rob = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    rob.shape('turtle')
     # Set the turtle speed to max (0)
-    
+    rob.speed(0)
+    rob.width(1)
+    numsides = 5
     # Set the turtle width to 1
-    
+    rob.hideturtle()
     # Create a variable to hold the number of sides in a pentagon
     
     # Create a variable to be the angle of 360 divided by the sides variable
-    
+    angle = 360/numsides
     # Use a for loop to repeat ALL the following lines of code 360 times. 
-        
+    for x in range(360):
+        if(x == 100):
+            rob.width(2)
+        elif(x==200):
+            rob.width(3)
+        rob.pencolor(get_next_color(x))
+        rob.forward(x)
+        rob.right(angle+1)
+
         # If the loop variable (i) is equal to 100, set the turtle width to 2
         
         # If the loop variable (i) is equal to 200, set the turtle width to 3
